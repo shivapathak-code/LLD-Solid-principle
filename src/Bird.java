@@ -19,36 +19,93 @@
 //    }
 //}
 
-class Bird {
-    void eat() {
-        System.out.println("Bird eats");
+//LSP = Child class ko parent ki jagah use karne par program ka expected behavior nahi tootna chahiye.
+//class Bird {
+//    void eat() {
+//        System.out.println("Bird eats");
+//    }
+//}
+//
+//interface Flyable {
+//    void fly();
+//}
+//
+//class Sparrow extends Bird implements Flyable {
+//    public void fly() {
+//        System.out.println("Sparrow flies");
+//    }
+//}
+//
+//class Penguin extends Bird {
+//    // Penguin does not implement Flyable
+//}
+//
+//class SolidPrinciple3
+//{
+//    public static void main(String[] args) {
+//        Bird b1 = new Sparrow();
+//        b1.eat();
+//
+//        Flyable f1 = new Sparrow();
+//        f1.fly();
+//
+//        Bird b2 = new Penguin();
+//        b2.eat();
+//    }
+//}
+
+//Another example
+//class Vehicle { // that is not better approch beacuse that is not follow L;
+//    void startEngine() {
+//        System.out.println("Engine started");
+//    }
+//}
+//
+//class Car extends Vehicle {
+//    @Override
+//    void startEngine() {
+//        System.out.println("Car engine started");
+//    }
+//}
+//
+//class Bicycle extends Vehicle {
+//    @Override
+//    void startEngine() {
+//        throw new UnsupportedOperationException(
+//                "Bicycle has no engine"
+//        );
+//    }
+//}
+
+class Vehicle {
+    void move() {
+        System.out.println("Vehicle is moving");
     }
 }
 
-interface Flyable {
-    void fly();
+interface EnginePowered {
+    void startEngine();
 }
 
-class Sparrow extends Bird implements Flyable {
-    public void fly() {
-        System.out.println("Sparrow flies");
+class Car extends Vehicle implements EnginePowered {
+    public void startEngine() {
+        System.out.println("Car engine started");
     }
 }
 
-class Penguin extends Bird {
-    // Penguin does not implement Flyable
+class Bicycle extends Vehicle {
+    // A bicycle can move without an engine
 }
 
-class SolidPrinciple3
-{
+class SolidPrinciple3 {
     public static void main(String[] args) {
-        Bird b1 = new Sparrow();
-        b1.eat();
+        Vehicle v1 = new Car();
+        v1.move();
 
-        Flyable f1 = new Sparrow();
-        f1.fly();
+        Vehicle v2 = new Bicycle();
+        v2.move();
 
-        Bird b2 = new Penguin();
-        b2.eat();
+        EnginePowered car = new Car();
+        car.startEngine();
     }
 }
