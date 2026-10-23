@@ -18,36 +18,36 @@
 //    }
 //}
 
-public class UserService{
-    EmailService emailService = new EmailService();
-    ReportService reportService = new ReportService();
-    void registerUser()
-    {
-        // register a user
-        System.out.println("User register successfully");
-        emailService.sendEmail();
-        reportService.generateReport();
-
-    }
-}
-class EmailService {
-    void sendEmail() {
-        // Send email
-        System.out.println("Send mail in your gmail");
-    }
-}
-class ReportService {
-    void generateReport() {
-        // Generate report
-        System.out.println("Generate a report");
-    }
-}
-class Solidprinciple1
-{
-    public static void main(String[] args)
-    {
-        UserService userService = new UserService();
-        userService.registerUser();
-    }
-}
-
+//public class UserService{
+//    EmailServices emailService = new EmailServices();
+//    ReportService reportService = new ReportService();
+//    void registerUser()
+//    {
+//        // register a user
+//        System.out.println("User register successfully");
+//        emailService.sendEmail();
+//        reportService.generateReport();
+//
+//    }
+//}
+//class EmailService {
+//    void sendEmail() {
+//        // Send email
+//        System.out.println("Send mail in your gmail");
+//    }
+//}
+//class ReportService {
+//    void generateReport() {
+//        // Generate report
+//        System.out.println("Generate a report");
+//    }
+//}
+//class Solidprinciple1
+//{
+//    public static void main(String[] args)
+//    {
+//        UserService userService = new UserService();
+//        userService.registerUser();
+//    }
+//}
+//
