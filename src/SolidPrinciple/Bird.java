@@ -1,4 +1,4 @@
-//SOLID PRINCIPLE
+package SolidPrinciple;//SOLID PRINCIPLE
 // 3.L stands for Liskov Substitution Principle (LSP) --> An object of a child class should be usable wherever its parent type is expected,
 // without breaking the program's expected behavior.
 //public class Bird { // Bad aproch beacuse penguin is not fly so use good principle that is L;
@@ -40,7 +40,7 @@
 //    // Penguin does not implement Flyable
 //}
 //
-//class SolidPrinciple3
+//class SolidPrinciple.SolidPrinciple3
 //{
 //    public static void main(String[] args) {
 //        Bird b1 = new Sparrow();
@@ -55,31 +55,31 @@
 //}
 
 //Another example
-//class Vehicle { // that is not better approch beacuse that is not follow L;
+//class SolidPrinciple.Vehicle { // that is not better approch beacuse that is not follow L;
 //    void startEngine() {
 //        System.out.println("Engine started");
 //    }
 //}
 //
-//class Car extends Vehicle {
+//class SolidPrinciple.Car extends SolidPrinciple.Vehicle {
 //    @Override
 //    void startEngine() {
-//        System.out.println("Car engine started");
+//        System.out.println("SolidPrinciple.Car engine started");
 //    }
 //}
 //
-//class Bicycle extends Vehicle {
+//class SolidPrinciple.Bicycle extends SolidPrinciple.Vehicle {
 //    @Override
 //    void startEngine() {
 //        throw new UnsupportedOperationException(
-//                "Bicycle has no engine"
+//                "SolidPrinciple.Bicycle has no engine"
 //        );
 //    }
 //}
 
 class Vehicle {
     void move() {
-        System.out.println("Vehicle is moving");
+        System.out.println("SolidPrinciple.Vehicle is moving");
     }
 }
 
@@ -89,7 +89,7 @@ interface EnginePowered {
 
 class Car extends Vehicle implements EnginePowered {
     public void startEngine() {
-        System.out.println("Car engine started");
+        System.out.println("SolidPrinciple.Car engine started");
     }
 }
 

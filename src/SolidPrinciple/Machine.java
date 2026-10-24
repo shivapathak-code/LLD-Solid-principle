@@ -1,4 +1,4 @@
-// SOLID PRINCIPLE
+package SolidPrinciple;// SOLID PRINCIPLE
 //4.I standa for Interface Segregation Principle (ISP) --> A class should not be forced to implement methods it does not need.
 // or second defination Kisi class ko aise methods implement karne ke liye force nahi
 // karna chahiye jinki use usse zaroorat hi nahi hai.
@@ -9,7 +9,7 @@
 //    void fax();
 //}
 //
-//class BasicPrinter implements Machine {
+//class SolidPrinciple.BasicPrinter implements Machine {
 //
 //    public void print() {
 //        System.out.println("Printing...");

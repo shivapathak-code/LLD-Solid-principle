@@ -1,4 +1,4 @@
-// SOLID PRINCIPLE
+package SolidPrinciple;// SOLID PRINCIPLE
 //5.D stands for DIP — Dependency Inversion Principle --> High-level modules should not depend on low-level modules.
 // Both should depend on abstractions.
 // second defination Ek class ko directly kisi specific class par dependent nahi hona chahiye;
@@ -9,7 +9,7 @@
 //        System.out.println("Send mail");
 //    }
 //}
-//class OrderService {
+//class SolidPrinciple.OrderService {
 //    EmailMethod email = new EmailMethod();
 //
 //    void placeOrder() {
@@ -53,12 +53,13 @@ class SolidPrinciple5
 {
     public static void main(String[] args) {
         OrderService order1 =
-                new OrderService(new Emailservice());
+                new OrderService(new Emailservice()); // this way to create called constructor dependency;
 
         order1.placeOrder();
-
+        SmsService sms = new SmsService();
         OrderService order2 =
-                new OrderService(new SmsService());
+                new OrderService(sms); // this way to create also called constructor dependency but that method to create
+        // as instance variable of class;
 
         order2.placeOrder();
 
